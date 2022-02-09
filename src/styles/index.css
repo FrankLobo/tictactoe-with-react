@@ -3,15 +3,18 @@
 
 body {
     background-color: rgb(93, 88, 84);
+    font-weight: bold;
 }
 
 h1 {
+    font-weight: bold;
     margin-top: 30px;
     text-align: center;
     font-size: 4rem;
     color: white;
 }
 h2 {
+    font-weight: bold;
     margin-top: 30px;
     text-align: center;
     font-size: 3rem;
@@ -42,18 +45,19 @@ input {
     padding: 5px;
     outline: 1 solid blue;
 }
-input:border{
+/* input:border{
     border: none;
-}
+} */
 .buttongroup{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .boton-x {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     margin: 15px 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,21 +68,21 @@ input:border{
     border-radius: 3px;
 }
 .boton-x:hover {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     margin: 15px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 5em;
     color: rgb(255, 248, 144);
-    background-color: rgb(140, 130, 120);
     border: none;
     border-radius: 3px;
 }
 .boton-o {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
+    padding-bottom: 10px;
     margin: 15px 10px;
     display: flex;
     align-items: center;
@@ -90,8 +94,8 @@ input:border{
     border-radius: 3px;
 }
 .boton-o:hover {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     margin: 15px 10px;
     display: flex;
     align-items: center;
@@ -103,3 +107,40 @@ input:border{
     border-radius: 3px;
 }
 
+table{
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    width: 45rem;
+    text-align: center;    
+    font-size: 6rem;
+    color: rgb(151, 148, 145);
+}
+tr:first-child {
+    width: 240px;
+    height: 10rem;
+    background-color: rgb(93, 88, 84);
+    border-bottom: 1px solid  rgb(151, 148, 145);
+    
+}
+tr:nth-child(2) {
+    width: 240px;
+    height: 10rem;
+    background-color: rgb(93, 88, 84);
+    border-bottom: 1px solid  rgb(151, 148, 145);
+    
+}
+tr:last-child {
+    width: 240px;
+    height: 10rem;
+    background-color: rgb(93, 88, 84);
+}
+
+td:first-child {
+    width: 240px;
+    border-right: 1px solid rgb(151, 148, 145);
+}
+td:nth-child(2) {
+    width: 240px;
+    border-right: 1px solid rgb(151, 148, 145);
+}

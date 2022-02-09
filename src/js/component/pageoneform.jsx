@@ -1,9 +1,9 @@
 import React from "react";
-import DynamicSubtitle from "./subtitulodinamico.jsx";
 const PageOneForm = () => {
+	const [player1, setPlayer1] = useState('');
+	const [player2, setPlayer2] = useState('');
 	return (
 		<>
-			<DynamicSubtitle />
 			<div className="container">
 				<span>CHOOSE YOUR WEAPON</span>
 				<div className="inputgroup">
@@ -19,7 +19,9 @@ const PageOneForm = () => {
 					/>
 				</div>
 				<div className="buttongroup">
-					<button className="boton-x">X</button>
+					<button onClick={() => {
+						setPlayer1()
+					}} className="boton-x">X</button>
 					<button className="boton-o">O</button>
 				</div>
 			</div>
