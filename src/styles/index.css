@@ -144,3 +144,6 @@ td:nth-child(2) {
     width: 240px;
     border-right: 1px solid rgb(151, 148, 145);
 }
+td {
+    caret-color: transparent;
+}
