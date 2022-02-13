@@ -1,7 +1,7 @@
 import React from "react";
 
-const Subtitle = ({ numerodejugadas }) => {
-	return <h2>{numerodejugadas}</h2>;
+const Subtitle = (props) => {
+	return <h2>{props.numerodejugadas}</h2>;
 };
 export default Subtitle;
 {

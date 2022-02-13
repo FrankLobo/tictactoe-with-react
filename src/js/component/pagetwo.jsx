@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 
-const PageTwo = () => {
-	const [turn, setTurn] = useState("x");
+const PageTwo = (props) => {
+	const [turn, setTurn] = useState(props.player1.begin ? "X" : "O");
 	const [numerodejugadas, setNumerodejugadas] = useState(Array(9).fill(""));
+
 	const showNumbers = (number) => {
 		let cells = [...numerodejugadas];
 
-		if (turn === "x") {
-			cells[number] = "x";
-			setTurn("o");
+		if (turn === "X") {
+			cells[number] = "X";
+			setTurn("O");
 		} else {
-			cells[number] = "o";
-			setTurn("x");
+			cells[number] = "O";
+			setTurn("X");
 		}
 		setNumerodejugadas(cells);
 	};
@@ -49,20 +50,3 @@ const PageTwo = () => {
 	);
 };
 export default PageTwo;
-
-// function matrixBuilder(builder) {
-//     let newMatrix = [];
-//     let matrixRow = [];
-//     if (typeof builder === 'number') {
-//         for (let i = 0; i < builder; i++) {
-//             newMatrix.push(matrixRow);
-//         }
-//         for (let i = 0; i < builder; i++) {
-//             matrixRow.push(Math.floor(Math.random() * 2));
-//         }
-//     }
-//     return newMatrix;
-// }
-
-// // do not change anything from this line down
-// console.log(matrixBuilder(5))

@@ -76,6 +76,7 @@ input {
     justify-content: center;
     font-size: 5em;
     color: rgb(255, 248, 144);
+    background-color: rgb(140, 130, 120);
     border: none;
     border-radius: 3px;
 }
