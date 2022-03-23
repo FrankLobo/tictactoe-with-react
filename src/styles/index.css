@@ -15,24 +15,26 @@ h1 {
 }
 h2 {
     font-weight: bold;
-    margin-top: 30px;
+    padding: 10px;
+    margin: 0;
     text-align: center;
     font-size: 3rem;
     color: white;
 }
 .container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
     margin-top: 160px;;
     width: 100%;
-    height: 260px;
+    height: 21rem;
     background-color: rgb(73, 66, 60);
     border-radius: 3px;
 }
 span {
     display: flex;
-    padding: 20px;
+    padding: 10px;
     color: white;
     display: flex;
     justify-content: center;
@@ -44,6 +46,12 @@ input {
     height: 30px;
     padding: 5px;
     outline: 1 solid blue;
+}
+.campoA{
+    margin: 10px;
+}
+.campoB{
+    margin: 10px;
 }
 /* input:border{
     border: none;
