@@ -47,15 +47,17 @@ input {
     padding: 5px;
     outline: 1 solid blue;
 }
+.errores{
+    margin: 0;
+    color: rgb(255, 137, 82);
+}
 .campoA{
-    margin: 10px;
+    margin: 5px;
 }
 .campoB{
-    margin: 10px;
+    margin: 5px;
 }
-/* input:border{
-    border: none;
-} */
+
 .buttongroup{
     display: flex;
     align-items: center;
@@ -115,7 +117,6 @@ input {
     border: none;
     border-radius: 3px;
 }
-
 table{
     margin: 0 auto;
     margin-top: 5rem;
@@ -155,4 +156,81 @@ td:nth-child(2) {
 }
 td {
     caret-color: transparent;
+}
+.popup-ganador{
+    margin: 0 auto;
+    width: 10rem;
+    height: 2rem;
+}
+.ganador{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    color: greenyellow;
+}
+.reiniciar {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 15px;
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    color: greenyellow;
+    background-color: rgb(145, 155, 131);
+}
+.reiniciar:hover {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 15px;
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    color: rgb(3, 80, 3);
+    background-color: rgb(163, 228, 72);
+}
+.reiniciar:active {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 15px;
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(60, 133, 0);
+}
+.botonHome {
+    position: absolute;
+    left: 47%;
+    bottom: 5%;
+    border: none;
+    border-radius: 4px;
+    color: greenyellow;
+    background-color: rgb(145, 155, 131);
+}
+.botonHome:hover {
+    position: absolute;
+    left: 47%;
+    bottom: 5%;
+    border: none;
+    border-radius: 4px;
+    color: rgb(3, 80, 3);
+    background-color: rgb(163, 228, 72);
+}
+.botonHome:active {
+    position: absolute;
+    left: 47%;
+    bottom: 5%;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(60, 133, 0);
 }

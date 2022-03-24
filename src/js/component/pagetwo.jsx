@@ -5,8 +5,8 @@ import PageOneForm from "./pageoneform.jsx";
 const PageTwo = (props) => {
 	const [turn, setTurn] = useState(props.player1.begin ? "X" : "O");
 	const [numerodejugadas, setNumerodejugadas] = useState(Array(9).fill(""));
-	const [page, setPage] = useState(false);
 	const [winner, setWinner] = useState();
+	const [page, setPage] = useState(false);
 
 	const checkWinner = (cells) => {
 		let combinations = {
@@ -39,13 +39,17 @@ const PageTwo = (props) => {
 				) {
 					setWinner(cells[pattern[0]]);
 				}
+				return;
 			});
 		}
 	};
 
 	const showNumbers = (number) => {
 		let cells = [...numerodejugadas];
-		if (cells[number] !== "") {
+		if (cells[number] !== "" || winner) {
+			return;
+		}
+		if (!numerodejugadas) {
 			return;
 		}
 		if (turn === "X") {
@@ -55,8 +59,7 @@ const PageTwo = (props) => {
 			cells[number] = "O";
 			setTurn("X");
 		}
-		checkWinner(cells);
-		setNumerodejugadas(cells);
+		return checkWinner(cells), setNumerodejugadas(cells);
 	};
 	const Jugadas = ({ number }) => {
 		return (
@@ -76,6 +79,28 @@ const PageTwo = (props) => {
 			) : (
 				<div className="">
 					<Subtitle numerodejugadas={`It is turn ${turn}`} />
+					<div className="popup-ganador">
+						{winner ? (
+							<>
+								<p className="ganador">{winner} ganaste!</p>
+								<button
+									className="reiniciar"
+									onClick={() => {
+										handleRestart();
+									}}>
+									Reiniciar el juego
+								</button>
+							</>
+						) : (
+							<button
+								className="reiniciar"
+								onClick={() => {
+									handleRestart();
+								}}>
+								Reiniciar el juego
+							</button>
+						)}
+					</div>
 					<div className="containerboard">
 						<table>
 							<tbody>
@@ -96,26 +121,15 @@ const PageTwo = (props) => {
 								</tr>
 							</tbody>
 						</table>
-						{winner && (
-							<>
-								<p>{winner} ganaste!</p>
-								<button
-									onClick={() => {
-										handleRestart();
-									}}>
-									Reiniciar el juego
-								</button>
-							</>
-						)}
+						<button
+							className="botonHome"
+							onClick={() => {
+								<PageOneForm />;
+								setPage(true);
+							}}>
+							Back to Home
+						</button>
 					</div>
-					<button
-						className="botonHome"
-						onClick={() => {
-							<PageOneForm />;
-							setPage(true);
-						}}>
-						Back to Home
-					</button>
 				</div>
 			)}
 		</>
